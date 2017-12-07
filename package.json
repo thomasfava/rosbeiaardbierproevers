@@ -1,0 +1,24 @@
+{
+  "name": "o2agency_theme",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "async": "2.*",
+    "browser-sync": "2.*",
+    "gulp": "3.*",
+    "gulp-autoprefixer": "3.*",
+    "gulp-consolidate": "0.*",
+    "gulp-iconfont": "8.*",
+    "gulp-imagemin": "3.*",
+    "gulp-notify": "2.*",
+    "gulp-plumber": "1.*",
+    "gulp-rename": "1.*",
+    "gulp-sass": "2.*",
+    "gulp-sass-glob": "1.*",
+    "gulp-scss-lint": "0.*",
+    "gulp-sourcemaps": "1.*",
+    "gulp-util": "3.*",
+    "lodash": "4.*",
+    "susy": "2.*"
+  }
+}

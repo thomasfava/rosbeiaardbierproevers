@@ -1,0 +1,165 @@
+//
+// LAYOUT CONFIGURATION
+// ---------------------------------------------------------------------
+// This file contains layout and grid settings.
+//
+
+// UNIT SETTINGS
+$rhythm-unit:               'rem';
+
+// SET CONSISTENT VERTICAL AND HORIZONTAL SPACING UNITS.
+$horz-spacing-unit:         1rem;
+$vert-spacing-unit:         $horz-spacing-unit;
+
+// GRID SETTINGS
+$gutter:                    4rem;
+$grid-padding:              3.2rem;
+$container:                 96rem;  // 1170px
+$mobile-columns:            4;
+
+// MOBILE
+$mobile-width:              20em;   // 320px (300px without gutter)
+$mobile-columns:            4;
+$mobile-sidebar-columns:    0;
+
+// PHABLET
+$phablet-width:             30em;   // 480px (460px without gutter)
+$phablet-columns:           8;
+$phablet-sidebar-columns:   0;
+
+// TABLET
+$tablet-width:              49em;   // 768px (748px without gutter)
+$tablet-columns:            12;
+$tablet-sidebar-columns:    5;
+
+// NOTEBOOK
+$notebook-width:            60em;   // 960px (940px without gutter)
+$notebook-columns:          12;
+$notebook-sidebar-columns:  3;
+
+// This is technically not used, because the grid is limited to 1200/1170px
+// DESKTOP
+$desktop-width:             75em;   // 1200px (1170px without gutter)
+$desktop-columns:           12;
+$desktop-sidebar-columns:   4;
+
+// COLUMN/GUTTER RATIO CALCULATION
+@function grid-ratio() {
+  @return (($container - (($gutter * $desktop-columns) - 1)) / $desktop-columns);
+}
+
+// SUSY SETTINGS
+$susy: (
+        columns: $mobile-columns,           // <number> | <list>
+        gutters: $gutter/grid-ratio(),      // <ratio>
+        container: $container,              // <length> | auto
+        global-box-sizing: border-box,      // border-box | content-box
+        debug: (
+                image: hide,                      // show | hide | show-columns | show-baseline
+                color: rgba(255, 0, 0, 0.3),            // <color>
+        ),
+        use-custom: (
+                rem: true,                        // true | false
+                box-sizing: false,                // Prevents deprecation warnings
+        )
+);
+
+//
+// BREAKPOINTS
+//
+
+// MIN-WIDTH
+@mixin mobile {
+  @include susy-breakpoint($mobile-width) {
+    @content;
+  }
+}
+
+@mixin phablet {
+  @include susy-breakpoint($phablet-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include susy-breakpoint($tablet-width) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @include susy-breakpoint($notebook-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include susy-breakpoint($desktop-width) {
+    @content;
+  }
+}
+
+// MAX-WIDTH
+@mixin mobile-max {
+  @include susy-breakpoint(max-width $mobile-width) {
+    @content;
+  }
+}
+
+@mixin phablet-max {
+  @include susy-breakpoint(max-width $phablet-width) {
+    @content;
+  }
+}
+
+@mixin tablet-max {
+  @include susy-breakpoint(max-width $tablet-width) {
+    @content;
+  }
+}
+
+@mixin notebook-max {
+  @include susy-breakpoint(max-width $notebook-width) {
+    @content;
+  }
+}
+
+@mixin desktop-max {
+  @include susy-breakpoint(max-width $desktop-width) {
+    @content;
+  }
+}
+
+// ONLY
+
+@mixin mobile-only {
+  @include susy-breakpoint($mobile-width ($phablet-width - (1 / 16))) {
+    @content;
+  }
+}
+
+@mixin phablet-only {
+  @include susy-breakpoint($phablet-width ($tablet-width - (1 / 16))) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @include susy-breakpoint($tablet-width ($notebook-width - (1 / 16))) {
+    @content;
+  }
+}
+
+@mixin notebook-only {
+  @include susy-breakpoint($notebook-width ($desktop-width - (1 / 16))) {
+    @content;
+  }
+}
+
+// BETWEEN (X) AND (Y)
+
+@mixin between($min, $max) {
+  @include susy-breakpoint($min ($max - (1 / 16))) {
+    @content;
+  }
+}

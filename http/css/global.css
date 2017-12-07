@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i|Source+Sans+Pro");
+.sales-list, .social-links, body {
+  margin: 0; }
+
+.sales-list, .social-links, body {
+  padding: 0; }
+
+.sales-list, .social-links {
+  list-style: none;
+  list-style-type: none;
+  list-style-image: none; }
+
+/*
+// BUTTON COSMETIC MIXIN - It takes 7 aguments (6 optional)
+// 1. The text color
+// 2. The background color (optional)
+// 3. The border color (optional)
+// 4. The text hover color (optional)
+// 5. The background hover color (optional)
+// 6. The border hover color (optional)
+// 7. The rounding value (optional)
+*/
+.page__main:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.page {
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3.2rem; }
+  .page:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+html, .page {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  min-height: 100%; }
+
+.social-links__text {
+  word-wrap: normal;
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  font-family: "Source Sans Pro", "Arial", "Helvetica", "sans-serif";
+  font-size: 1.7rem;
+  line-height: 1.55;
+  color: #262626; }
+
+*::-moz-selection {
+  background: #eb5855;
+  color: #fff; }
+
+*::selection {
+  background: #eb5855;
+  color: #fff; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.55;
+  margin: 1.8rem 0 1.2rem;
+  font-family: "Sorts Mill Goudy", serif; }
+
+h1 {
+  font-size: 3.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-column-span: all;
+     -moz-column-span: all;
+          column-span: all; }
+  h1.rbb {
+    text-transform: none;
+    font-size: 2.8rem; }
+
+h2 {
+  font-size: 2.2rem;
+  -webkit-column-span: all;
+     -moz-column-span: all;
+          column-span: all; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.7rem; }
+
+h5 {
+  font-size: 1.4rem; }
+
+h6 {
+  font-size: 1.1rem; }
+
+p {
+  margin: 0 0 1rem;
+  font-weight: 300; }
+
+a {
+  transition: color .2s ease-in-out;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink;
+  color: #262626; }
+  a:hover {
+    color: #680e0c;
+    cursor: pointer; }
+  a:focus {
+    outline: none; }
+  a img {
+    vertical-align: top; }
+    a img:focus {
+      outline: none; }
+
+b,
+strong {
+  font-weight: 300; }
+
+em {
+  font-style: italic;
+  font-size: 1.4rem; }
+
+ul,
+ol {
+  padding-left: 2rem;
+  margin: 0; }
+
+span.mailto, span.ext {
+  display: none; }
+
+img {
+  border: 0;
+  outline: 0;
+  max-width: 100%;
+  height: auto; }
+
+.page {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #eee;
+  background-image: linear-gradient(183deg, #fefefe, #eee 70%); }
+  .page__main {
+    padding: 20px 0 40px;
+    margin: auto 0; }
+  @media (min-width: 49em) {
+    .page__article {
+      width: 56.54122%;
+      float: right;
+      margin-right: 0; } }
+  .page__frame {
+    text-align: center;
+    margin: 30px 0 40px; }
+    @media (min-width: 49em) {
+      .page__frame {
+        margin-top: 65px;
+        width: 39.15771%;
+        float: left;
+        margin-right: 4.30108%; } }
+  .page__aside {
+    margin-top: auto; }
+  .page__footer {
+    margin-top: 10px; }
+
+.button {
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  background-color: #e62b27;
+  color: #fff;
+  padding: 0.1em 0.7em 0.05em;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #e62b27;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  box-shadow: 1px 6px 8px -4px rgba(0, 0, 0, 0.15);
+  text-shadow: none; }
+  .button:hover {
+    background-color: transparent;
+    color: #e62b27;
+    cursor: pointer; }
+
+.copyright {
+  text-align: center;
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1.1rem; }
+
+.frame {
+  -webkit-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  background-color: #ededed;
+  border: solid 16px #fefefe;
+  border-bottom-color: #eee;
+  border-left-color: #ddd;
+  border-radius: 2px;
+  border-right-color: #e3e3e3;
+  border-top-color: #e9e9e9;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 1px 3px 8px -4px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 260px;
+  position: relative;
+  text-align: center; }
+  .frame:before {
+    border-radius: 2px;
+    bottom: -7px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+    content: "";
+    left: -7px;
+    position: absolute;
+    right: -7px;
+    top: -7px; }
+  .frame:after {
+    border-radius: 2px;
+    bottom: -10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    content: "";
+    left: -10px;
+    position: absolute;
+    right: -10px;
+    top: -10px; }
+  .frame__image {
+    display: block;
+    border: solid 1px;
+    border-bottom-color: #eee;
+    border-left-color: #ccc;
+    border-right-color: #ccc;
+    border-top-color: #ddd;
+    max-height: 100%;
+    max-width: 100%; }
+
+.intro__cta {
+  -webkit-column-span: all;
+     -moz-column-span: all;
+          column-span: all;
+  text-align: center; }
+  @media (min-width: 49em) {
+    .intro__cta--first {
+      display: none; } }
+
+.multicol {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-width: 240px;
+     -moz-column-width: 240px;
+          column-width: 240px;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem; }
+
+.sale-points {
+  margin-top: 4rem; }
+
+.sales-list__item {
+  position: relative;
+  padding-left: 1.6rem; }
+  .sales-list__item:before {
+    content: '';
+    background-color: #e62b27;
+    position: absolute;
+    top: 0.675em;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; }
+  .sales-list__item em {
+    display: block;
+    font-style: italic;
+    font-family: "Sorts Mill Goudy", serif; }
+    @media (min-width: 49em) {
+      .sales-list__item em {
+        display: inline; }
+        .sales-list__item em:before {
+          content: '- '; } }
+
+.social-links {
+  margin-bottom: 8px;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column-align: center;
+      justify-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 49em) {
+    .social-links {
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      padding-left: 43.45878%;
+      text-align: left; } }
+  .social-links__item {
+    display: inline-block; }
+    .social-links__item + .social-links__item {
+      margin-left: 14px; }
+  .social-links__link {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .social-links__link--facebook {
+      background-image: url(../images/icon-facebook.svg); }
+    .social-links__link--untappd {
+      background-image: url(../images/icon-untappd.svg); }
+    .social-links__link--instagram {
+      background-image: url(../images/icon-instagram.svg); }
+    .social-links__link--twitter {
+      background-image: url(../images/icon-twitter.svg); }
+
+/*# sourceMappingURL=global.css.map */
