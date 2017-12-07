@@ -10,16 +10,6 @@
   list-style-type: none;
   list-style-image: none; }
 
-/*
-// BUTTON COSMETIC MIXIN - It takes 7 aguments (6 optional)
-// 1. The text color
-// 2. The background color (optional)
-// 3. The border color (optional)
-// 4. The text hover color (optional)
-// 5. The background hover color (optional)
-// 6. The border hover color (optional)
-// 7. The rounding value (optional)
-*/
 .page__main:after {
   content: '';
   display: block;
