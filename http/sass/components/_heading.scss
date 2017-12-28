@@ -1,0 +1,13 @@
+.heading {
+  &--title {
+    @extend %visually-hidden;
+  }
+  &--logo {
+    display: block;
+    margin: 30px auto 24px;
+    width: 80%;
+    max-width: 282px;
+    max-height: 96px;
+
+  }
+}

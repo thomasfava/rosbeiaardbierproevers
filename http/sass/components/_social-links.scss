@@ -21,12 +21,18 @@
   }
   &__link {
     $social-icon-size: 2.4rem;
+    transition: opacity .2s ease-in-out;
     display: inline-block;
     width: $social-icon-size;
     height: $social-icon-size;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.85;
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
 
     &--facebook {
       background-image: url(../images/icon-facebook.svg);

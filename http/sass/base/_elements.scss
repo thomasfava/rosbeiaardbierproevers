@@ -46,8 +46,9 @@ h4,
 h5,
 h6 {
   line-height: $base-line-height;
-  margin: 1.8rem 0 1.2rem;
+  margin: 2.2rem 0 1.2rem;
   font-family: $secondary-font;
+  color: color-grays('dark');
 }
 
 h1 {
@@ -83,7 +84,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 1rem;
+  margin: 0 0 1.2rem;
   font-weight: 300;
 }
 
