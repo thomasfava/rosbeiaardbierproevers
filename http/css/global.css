@@ -59,7 +59,8 @@ body {
   font-family: "Source Sans Pro", "Arial", "Helvetica", "sans-serif";
   font-size: 1.7rem;
   line-height: 1.55;
-  color: #262626; }
+  color: #262626;
+  font-weight: 300; }
 
 *::-moz-selection {
   background: #eb5855;
@@ -87,9 +88,6 @@ h1 {
   -webkit-column-span: all;
      -moz-column-span: all;
           column-span: all; }
-  h1.rbb {
-    text-transform: none;
-    font-size: 2.8rem; }
 
 h2 {
   font-size: 2.2rem;
@@ -140,6 +138,9 @@ ul,
 ol {
   padding-left: 2rem;
   margin: 0; }
+  ul li,
+  ol li {
+    font-weight: 300; }
 
 span.mailto, span.ext {
   display: none; }

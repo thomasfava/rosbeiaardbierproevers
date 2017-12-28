@@ -24,11 +24,11 @@ html {
 
 body {
   @extend %reset;
-
   font-family: $primary-font;
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $color-base-text;
+  font-weight: 300;
 }
 
 // SELECTED TEXT
@@ -56,10 +56,6 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   column-span: all;
-  &.rbb {
-    text-transform: none;
-    font-size: 2.8rem;
-  }
 }
 
 h2 {
@@ -125,6 +121,9 @@ ul,
 ol {
   padding-left: 2rem;
   margin: 0;
+  li {
+    font-weight: 300;
+  }
 }
 
 span {
