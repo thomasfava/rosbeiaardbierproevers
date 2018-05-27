@@ -49,8 +49,9 @@ h6 {
   line-height: $base-line-height;
   margin: 2.2rem 0 1.2rem;
   font-family: $secondary-font;
-  color: color-grays('dark');
+  color: color-grays('black');
   letter-spacing: 0.025em;
+  font-weight: 400;
 }
 
 h1 {
