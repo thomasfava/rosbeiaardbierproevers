@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i|Source+Sans+Pro:300,600");
+@import url("https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,300i|Source+Sans+Pro:300");
 .social-links, .unordered-list, body {
   margin: 0; }
 
@@ -80,8 +80,9 @@ h6 {
   line-height: 1.55;
   margin: 2.2rem 0 1.2rem;
   font-family: "Sorts Mill Goudy", serif;
-  color: #333;
-  letter-spacing: 0.025em; }
+  color: #000;
+  letter-spacing: 0.025em;
+  font-weight: 400; }
 
 h1 {
   font-size: 3.8rem;
