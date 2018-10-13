@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,300i|Source+Sans+Pro:300");
-.social-links, .unordered-list, body {
+.results, .social-links, .unordered-list, body {
   margin: 0; }
 
-.social-links, .unordered-list, body {
+.results, .social-links, .unordered-list, body {
   padding: 0; }
 
-.social-links, .unordered-list {
+.results, .social-links, .unordered-list {
   list-style: none;
   list-style-type: none;
   list-style-image: none; }
@@ -241,6 +241,65 @@ img {
   -webkit-column-gap: 3rem;
      -moz-column-gap: 3rem;
           column-gap: 3rem; }
+
+.activity {
+  border: 1px solid #e62b27;
+  padding: 0.4rem 2.4rem;
+  margin-bottom: 2.2rem;
+  background-color: rgba(255, 255, 255, 0.4); }
+  .activity h2 {
+    margin-top: 1.6rem; }
+  .activity p {
+    font-size: 1.4rem; }
+
+.results {
+  counter-reset: item;
+  list-style: none; }
+  .results__item {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #cecece; }
+    .results__item:before {
+      content: "Vraag " counter(item, decimal) ": ";
+      counter-increment: item;
+      font-family: "Sorts Mill Goudy", serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      font-style: italic;
+      display: inline-block;
+      min-width: 9rem; }
+  .results__result {
+    display: inline-block;
+    width: 100%;
+    vertical-align: text-top; }
+    @media (min-width: 30em) {
+      .results__result {
+        width: calc(100% - 9rem - 1rem); } }
+    @media (min-width: 49em) {
+      .results__result {
+        width: 27rem; } }
+  .results__info {
+    font-size: 1.4rem;
+    font-style: italic;
+    display: block;
+    vertical-align: text-top; }
+    @media (min-width: 30em) {
+      .results__info {
+        padding-left: 9rem; } }
+    @media (min-width: 49em) {
+      .results__info {
+        padding-left: 0;
+        display: inline-block;
+        width: calc(100% - 27rem - 9rem - 1rem); } }
+  .results em {
+    display: inline-block;
+    margin-right: 0.16em; }
+  .results--alternative .results__item:before {
+    content: "Schifting " counter(item, decimal) ": "; }
+  @media (min-width: 30em) {
+    .results--alternative .results__result {
+      width: calc(100% - 9rem - 1rem); } }
+  .results:last-of-type {
+    margin-bottom: 2.4rem; }
 
 .social-links {
   margin-bottom: 8px;
