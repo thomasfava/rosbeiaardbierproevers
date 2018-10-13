@@ -1,13 +1,14 @@
 {
     "name": "Ros Beiaard Bierproevers",
+    "short_name": "Ros Beiaard Bierproevers",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=9By9XoWLkp",
+            "src": "android-chrome-192x192.png?v=LbyMgKyLWw",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=9By9XoWLkp",
+            "src": "android-chrome-512x512.png?v=LbyMgKyLWw",
             "sizes": "512x512",
             "type": "image/png"
         }
