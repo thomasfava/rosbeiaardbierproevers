@@ -68,12 +68,13 @@ gulp.task('sass', function() {
     // @see: https://github.com/floridoo/gulp-sourcemaps/wiki/Plugins-with-gulp-sourcemaps-support
     .pipe(sourcemaps.init())
     .pipe(sass({
-      style: 'compressed',
+      // Output styles: 'nested', 'compact', 'expanded' or 'compressed'
+      outputStyle: 'compressed',
       // "includePaths" is needed so LibSass (which gulp-sass actually wraps
       // around) can find it's dependencies.
       includePaths: ['node_modules']
     }))
-    .pipe(autoprefix('last 6 versions', 'ie 9-11', 'Chrome >= 50', 'Firefox >= 45', 'Safari >= 7', 'Opera >= 35', '> 1%'))
+    .pipe(autoprefix('last 3 versions', 'ie 11', '> 1%'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.baseDir + 'css/'))
     // Put browsersync right after css has been written. This will update your
