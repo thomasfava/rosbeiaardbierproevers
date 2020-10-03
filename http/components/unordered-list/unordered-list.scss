@@ -1,0 +1,31 @@
+@import "sass-essentials";
+
+.unordered-list {
+  @include reset-list();
+  &__item {
+    position: relative;
+    padding-left: 1.6rem;
+    &:before {
+      content: '';
+      background-color: color('primary');
+      position: absolute;
+      top: 0.675em;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+    }
+    em {
+      display: block;
+      font-style: italic;
+      font-family: $secondary-font;
+      color: color-grays('dark');
+      @include tablet {
+        display: inline;
+        &:before {
+          content: '- ';
+        }
+      }
+    }
+  }
+}

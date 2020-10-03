@@ -1,0 +1,6 @@
+.container {
+  // Horizontal container
+  @include contain();
+
+  //padding: 0 $grid-padding;
+}

@@ -1,0 +1,32 @@
+.page {
+  @include page-flex();
+  @include contain();
+  justify-content: center;
+  background-color: $color-background-to;
+  background-image:linear-gradient(183deg, $color-background-from, $color-background-to 70%);
+
+  &__main {
+    @include clearfix();
+    padding: 20px 0 40px;
+    margin: auto 0;
+  }
+  &__article {
+    @include tablet {
+      @include span(last 7 of 12);
+    }
+  }
+  &__logo {
+    text-align: center;
+    margin: 20px 0 30px;
+    @include tablet {
+      margin-top: 80px;
+      @include span(5 of 12);
+    }
+  }
+  &__aside {
+    margin-top: auto;
+  }
+  &__footer {
+    margin-top: 10px;
+  }
+}

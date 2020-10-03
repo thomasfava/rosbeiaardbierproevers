@@ -1,0 +1,15 @@
+@import "sass-essentials";
+
+.intro {
+  &__cta {
+    column-span: all;
+    text-align: center;
+    &--first {
+      @include tablet {
+        display: none;
+      }
+    }
+    &--second {
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@include global-box-sizing;
+
+// First step define your font-face families if necessary! Example below.
+// @include font-face('Fira Sans', 100, italic, 'FiraSans-UltraLightItalic');
+
+html,
+body {
+  //overflow-x: hidden; // NECESSARY FOR EXTENDING LAYOUT
+}
+
+html {
+  @include page-flex();
+  @include font-factor(62.5%);
+  @include text-size-adjust(100%);
+}
+
+body {
+  @include reset;
+  font-family: $primary-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $color-base-text;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+// SELECTED TEXT
+* {
+  &::selection {
+    background: $color-base-selected-text-background;
+    color: $color-base-selected-text;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $base-line-height;
+  margin: 2.2rem 0 1.2rem;
+  font-family: $secondary-font;
+  color: color-grays('black');
+  letter-spacing: 0.025em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  text-align: center;
+  text-transform: uppercase;
+  column-span: all;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  column-span: all;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0 0 1.2rem;
+  font-weight: 300;
+}
+
+a {
+  transition: color 0.2s ease-in-out;
+  color: $color-base-link;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  text-underline-position: under;
+  text-decoration-color: color("primary");
+
+  &:hover {
+    color: $color-base-link-hover;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    vertical-align: top;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+b,
+strong {
+  font-weight: 300;
+}
+
+em {
+  font-style: italic;
+  font-size: $h5-font-size;
+}
+
+ul,
+ol {
+  padding-left: 2rem;
+  margin: 0;
+  li {
+    font-weight: 300;
+  }
+}
+
+span {
+  &.mailto,
+  &.ext {
+    display: none;
+  }
+}
+
+img {
+  border: 0;
+  outline: 0;
+  max-width: 100%;
+  height: auto;
+}
