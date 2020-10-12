@@ -13,6 +13,11 @@
   p {
     font-size: $h5-font-size;
   }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
 }
 
 .results {
@@ -82,9 +87,9 @@
       }
     }
     .results__result {
-      @include phablet {
-        width: calc(100% - 9rem - 1rem);
-      }
+      //@include phablet {
+      //  width: calc(100% - 9rem - 1rem);
+      //}
     }
   }
 
