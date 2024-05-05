@@ -92,8 +92,9 @@ a {
     cursor: pointer;
   }
 
-  &:focus {
-    outline: none;
+  &:focus-visible {
+    outline: thin dotted color("primary");;
+    outline-offset: 0.3rem;
   }
 
   img {
