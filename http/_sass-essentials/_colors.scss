@@ -1,13 +1,12 @@
 // Definition of the corporate color scheme in complementary colors.
 $colors: (
-        'primary': #e62b27,
-        'secondary': green,
+  'primary': #e62b27,
+  'secondary': #231f20,
 );
 
 $colors-complementary: (
-        'primary': darken(#e62b27, 30%),
-        'secondary': #f8f8f8,
-
+  'primary': darken(#e62b27, 16%),
+  'secondary': #f8f8f8,
 );
 
 // The lighten and darken default factor.
