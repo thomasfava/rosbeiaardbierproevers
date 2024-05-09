@@ -96,7 +96,7 @@ a {
   }
 
   &:focus-visible {
-    outline: thin dotted color("primary");;
+    outline: thin dotted color-complementary("primary");
     outline-offset: 0.3rem;
   }
 
@@ -117,6 +117,7 @@ strong {
 em {
   font-style: italic;
   font-size: $h5-font-size;
+  font-family: $secondary-font;
 }
 
 ul,

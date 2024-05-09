@@ -5,7 +5,7 @@ $colors: (
 );
 
 $colors-complementary: (
-  'primary': darken(#e62b27, 16%),
+  'primary': #A20E0B,
   'secondary': #f8f8f8,
 );
 
@@ -17,15 +17,15 @@ $factor: 10%;
   @return unquote('#')+$part+$part+$part;
 }
 $colors-grays: (
-        'black': o2_grays('0'),
-        'darkest': o2_grays('2'),
-        'darker': o2_grays('26'),
-        'dark': o2_grays('3'),
-        'gray': o2_grays('8f'),
-        'light': o2_grays('ce'),
-        'lighter': o2_grays('f8'),
-        'lightest': o2_grays('fa'),
-        'white': o2_grays('f'),
+  'black': o2_grays('0'),
+  'darkest': o2_grays('2'),
+  'darker': o2_grays('26'),
+  'dark': o2_grays('3'),
+  'gray': o2_grays('8f'),
+  'light': o2_grays('eb'),
+  'lighter': o2_grays('f8'),
+  'lightest': o2_grays('fa'),
+  'white': o2_grays('f'),
 );
 
 // STATES, MESSAGES COLORS (do not change)
@@ -34,16 +34,21 @@ $color-warning: #fc0;
 $color-error: #f00;
 $color-shadow: rgba(0, 0, 0, 0.5);
 
-
+//$color-background-from: lighten(#231f20, 0.5%);
+//$color-background-to: darken(#231f20, 6%);
 $color-background-from: #fefefe;
 $color-background-to: #eee;
 
 // BASE OUTPUT
-// Only change variable values here.
-// All base scss files use only these variable names!
+// Only change variable values here.// All base scss files use only these variable names!
+//$color-base-text: map-get($colors-grays, 'light');
+//$color-base-link: map-get($colors-grays, 'light');
+//$color-base-link-hover: map-get($colors-grays, 'white');
+//$color-base-selected-text: map-get($colors-grays, 'white');
+//$color-base-selected-text-background: lighten(map-get($colors, 'primary'), $factor);
+
 $color-base-text: map-get($colors-grays, 'darker');
 $color-base-link: map-get($colors-grays, 'darker');
 $color-base-link-hover: map-get($colors-complementary, 'primary');
-$color-base-selected-text: map-get($colors-grays, 'white');
-$color-base-selected-text-background: lighten(map-get($colors, 'primary'), $factor);
-
+$color-base-selected-text: map-get($colors-complementary, 'primary'); //map-get($colors-grays, 'light');
+$color-base-selected-text-background: map-get($colors-grays, 'light'); //map-get($colors-complementary, 'primary');
